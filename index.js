@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
     hidePagesExcept(docsPage);
     makeActiveLink(docsLink);
-    docsPage.innerHTML = marked.parse('# This is heading \n ## This is heading 2 \n ### This is heading \n Let us write a quick text and sign off! Here is a list \n - Hello \n - World');
+    //docsPage.innerHTML = marked.parse('# This is heading \n ## This is heading 2 \n ### This is heading \n Let us write a quick text and sign off! Here is a list \n - Hello \n - World');
     getMarkdown(docsPage);
 //     var req = new XMLHttpRequest();
 // req.onload = function(){
@@ -119,11 +119,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function getMarkdown(docsPage) {
-    fetch('content/docs.md')
+    fetch('/content/docs.md')
     .then(response => response.blob())
     .then(blob => blob.text())
     .then(markdown => {
       docsPage.innerHTML = marked.parse(markdown);
+      console.log(markdown);
     })
   }
 
