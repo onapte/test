@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
     hidePagesExcept(docsPage);
     makeActiveLink(docsLink);
-    docsPage.innerHTML = marked.parse('# This is heading \n ## This is heading 2 \n ### This is heading \n Let us write a quick text and sign off! Here is a list \n - Hello \n - World');
-    //getMarkdown(docsPage);
+    //docsPage.innerHTML = marked.parse('# This is heading \n ## This is heading 2 \n ### This is heading \n Let us write a quick text and sign off! Here is a list \n - Hello \n - World');
+    getMarkdown(docsPage);
 //     var req = new XMLHttpRequest();
 // req.onload = function(){
 //     process_webgl_data(this.responseText);
@@ -120,11 +120,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function getMarkdown(docsPage) {
-    fetch('A:/js projects/hawa-on/content/hello.md')
+    fetch('/content/docs.md')
     .then(response => response.blob())
     .then(blob => blob.text())
     .then(markdown => {
       docsPage.innerHTML = marked.parse(markdown);
+      console.log(markdown);
     })
   }
 
