@@ -120,12 +120,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function getMarkdown(docsPage) {
-    fetch('content/docs.md')
+    fetch('https://github.com/onapte/test/blob/main/content/docs.md')
     .then(response => response.blob())
     .then(blob => blob.text())
     .then(markdown => {
       docsPage.innerHTML = marked.parse(markdown);
-      console.log(markdown);
+      console.log(marked.parse(markdown));
     })
   }
 
