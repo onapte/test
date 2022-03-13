@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function getMarkdown(docsPage) {
-    fetch('/content/docs.md')
+    fetch('content/docs.md')
     .then(response => response.blob())
     .then(blob => blob.text())
     .then(markdown => {
