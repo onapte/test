@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById(`${station}`).style.display = "block";
       };
     });
+<<<<<<< HEAD
   });
 
   // Display docs page
@@ -93,6 +94,42 @@ document.addEventListener("DOMContentLoaded", function () {
     makeActiveLink(docsLink);
     getMarkdown(docsPage);
   });
+=======
+
+    docsLink.addEventListener("click", function(e) {
+      e.preventDefault();
+    hidePagesExcept(docsPage);
+    makeActiveLink(docsLink);
+    //docsPage.innerHTML = marked.parse('# This is heading \n ## This is heading 2 \n ### This is heading \n Let us write a quick text and sign off! Here is a list \n - Hello \n - World');
+    getMarkdown(docsPage);
+//     var req = new XMLHttpRequest();
+// req.onload = function(){
+//     process_webgl_data(this.responseText);
+// };
+// req.open('GET', './content/hello.md');
+// req.send();
+// docsPage.innerHTML = req.responseText;
+
+      
+    })
+
+    lightningLink.addEventListener('click', function() {
+      hidePagesExcept(lightningPage);
+      console.log(lightningPage.innerHTML);
+      makeActiveLink(lightningLink);
+    })
+  });
+
+  function getMarkdown(docsPage) {
+    fetch('https://young-waters-99383.herokuapp.com/https://github.com/onapte/test/blob/main/content/docs.md')
+    .then(response => response.blob())
+    .then(blob => blob.text())
+    .then(markdown => {
+      docsPage.innerHTML = marked.parse(markdown);
+      console.log(markdown);
+    })
+  }
+>>>>>>> 88c1623f18f7d05b48a107005e94e4f087b9bdd0
 
   // Display lightning page
   lightningLink.addEventListener("click", function () {
