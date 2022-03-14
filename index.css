@@ -163,6 +163,13 @@
 
 }
 
+#lightning-page {
+    height: 600px;
+    width:  100%;
+    background-color: red;
+    color: white;
+}
+
 #chartdiv {
     height: 600px;
     background-color: lightblue;
