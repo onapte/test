@@ -120,17 +120,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function getMarkdown(docsPage) {
-    fetch('/content/docs.md', {
-      method: 'GET',
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      }
+    fetch('https://young-waters-99383.herokuapp.com/https://github.com/onapte/test/blob/main/content/docs.md', {
+      
     })
     .then(response => response.blob())
     .then(blob => blob.text())
     .then(markdown => {
-      docsPage.innerHTML = marked.parse(markdown);
-      console.log(marked.parse(markdown));
+      document.querySelector('#docs-div-1').innerHTML = markdown;
+      let req = document.querySelector('#readme').innerText;
+      docsPage.innerHTML = marked.parse(req);
+      console.log(marked.parse(req));
     })
   }
 
