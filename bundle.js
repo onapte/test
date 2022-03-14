@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function getMarkdown(docsPage) {
-    fetch('https://github.com/onapte/test/blob/main/content/docs.md')
+    fetch('https://young-waters-99383.herokuapp.com/https://github.com/onapte/test/blob/main/content/docs.md')
     .then(response => response.blob())
     .then(blob => blob.text())
     .then(markdown => {
