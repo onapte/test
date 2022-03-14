@@ -100,14 +100,14 @@ document.addEventListener("DOMContentLoaded", function () {
     hidePagesExcept(docsPage);
     makeActiveLink(docsLink);
     //docsPage.innerHTML = marked.parse('# This is heading \n ## This is heading 2 \n ### This is heading \n Let us write a quick text and sign off! Here is a list \n - Hello \n - World');
-    getMarkdown(docsPage);
-//     var req = new XMLHttpRequest();
-// req.onload = function(){
-//     process_webgl_data(this.responseText);
-// };
-// req.open('GET', './content/hello.md');
-// req.send();
-// docsPage.innerHTML = req.responseText;
+    //getMarkdown(docsPage);
+     var req = new XMLHttpRequest();
+req.onload = function(){
+     process_webgl_data(this.responseText);
+};
+req.open('GET', './content/hello.md');
+req.send();
+ docsPage.innerHTML = req.responseText;
 
       
     })
