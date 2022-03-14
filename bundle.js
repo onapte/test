@@ -120,7 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function getMarkdown(docsPage) {
-    fetch('https://github.com/onapte/test/blob/main/content/docs.md', {
+    fetch('/content/docs.md', {
+      method: 'GET',
       headers: {
         "Access-Control-Allow-Origin": "*",
       }
