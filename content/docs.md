@@ -11,7 +11,7 @@ HAWA-ON is a weather platform which provides latest weather data for all the maj
 ## Our Services
 1. Table-view    
 The **Table-view** page provides a tabular representation of latest weather data. Each entry in the table follows a `color key`.
-![Color-key](https://github.com/onapte/test/blob/main/content/color-key.png)
+![Color-key](https://github.com/onapte/test/blob/main/content/color-key.png)  
 As shown, the `color key` consists of 4 entries. The red entry corresponds to weather unsafe for flying, the yellow entry corresponds to weather to be careful for flying, the green entry corresponds to weather safe for flying and the blue entry corresponds to no information about the weather.  
 
 2. Map-view    
