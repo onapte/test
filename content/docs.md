@@ -16,7 +16,7 @@ As shown, the `color key` consists of 4 entries. The red entry corresponds to we
 
 2. Map-view    
 The **Map-view** page converts the tabular entries in the **Table-view** to markers inside a map. The markers follow the same `color key` as stated above. The map is scrollable with dynamic mouse interaction. Hovering on any part on the map will show up the name of that place. In addition, clicking or hovering on any marker on the map will display the name of the place the marker is pointing to.
-![Sample-map](sample-map.png)
+![Sample-map](https://github.com/onapte/test/blob/main/content/sample-map.png)
 
 3. Satellite Images
 The **Satellite** page shows the latest Satellite images of India - Infrared and Water vapour. Please note that these images are a copyright of the Ministry of Earth Sciences and are for quick reference only.
